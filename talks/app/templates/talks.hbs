@@ -1,0 +1,13 @@
+<form>
+{{input type="text" placeholder="speaker" id="speaker" value=speaker}}
+{{input type="text" placeholder="topic" id="topic" value=topic}}
+<button {{action "createTalk"}}>Create Talk</button>
+</form>
+
+{{#each item in model}}
+<tr>
+  <td>{{item.speaker}}</td>
+  <td>{{item.topic}}</td>
+  <td><button {{action "deleteTalk" item}}>Delete TAlk</button>
+</tr>
+{{/each}}
